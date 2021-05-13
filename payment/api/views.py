@@ -18,7 +18,7 @@ import stripe
 
 class HomeView(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'payments/payment.html'
+    template_name = 'payment/payment.html'
 
     def get(self, request):
         stripe_config = {'publicKey': 'f***y**'}
@@ -72,17 +72,17 @@ def create_checkout_session(request):
         
 class SuccessView(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'payments/success.html'
+    template_name = 'payment/success.html'
 
     def get(self, request):
         stripe_config = {'type':'success'}
-        return Response({'profiles': stripe_config})
+        return Response({'status': stripe_config})
     
     
 class CancelledView(APIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'payments/cencelled.html'
+    template_name = 'payment/cencelled.html'
 
     def get(self, request):
         stripe_config = {'type':'cancel'}
-        return Response({'profiles': stripe_config})
+        return Response({'status': stripe_config})
