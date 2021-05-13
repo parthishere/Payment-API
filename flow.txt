@@ -19,3 +19,8 @@ Confirm Payment with Stripe Webhooks
     Set up the webhook endpoint
     Test the endpoint using the Stripe CLI
     Register the endpoint with Stripe
+
+
+fake cred number : 4242 4242 4242 4242
+cvv : 123
+pin: 12345
