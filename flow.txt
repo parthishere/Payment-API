@@ -1,0 +1,21 @@
+Get Publishable Key
+    Send an AJAX request from the client to the server requesting the publishable key
+    Respond with the key
+    Use the key to create a new instance of Stripe.js
+
+
+Create Checkout Session
+    Send another AJAX request to the server requesting a new Checkout Session ID
+    Generate a new Checkout Session and send back the ID
+    Redirect to the checkout page for the user to finish their purchase
+
+
+Redirect the User Appropriately
+    Redirect to a success page after a successful payment
+    Redirect to a cancellation page after a cancelled payment
+
+
+Confirm Payment with Stripe Webhooks
+    Set up the webhook endpoint
+    Test the endpoint using the Stripe CLI
+    Register the endpoint with Stripe
